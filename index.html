@@ -1,0 +1,179 @@
+<HTML>
+<HEAD>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<STYLE type="text/css">
+		#bg{
+			position: fixed;
+			width: 105%;
+			height: 105%;
+			left: -5%;
+			top: -5%;
+			z-index: -1;
+		}
+		#design{
+			position: relative;
+			width: 50%;
+			margin:  10px 10px 10px 10px;
+			z-index: 1;
+			border-width:  10px;
+			border-color: cba48c;
+			border-style: double;
+			top: 5%;
+		}
+		#dot{
+			position: relative;
+			width: 45%;
+			margin:  10px 10px 10px 10px;
+			z-index: 1;
+			top: 5%;
+			left: 1%;
+		}
+		#font{
+			position: fixed;
+			left: 60%;
+			top: 0%;
+			z-index: 1;
+		}
+		#body{
+			position: fixed;
+			left: 53%;
+			top: 13%;
+			z-index: 1;
+			margin:  10px 10px 10px 10px;
+		}
+		#body2{
+			position: fixed;
+			left: 53%;
+			top: 56%;
+			z-index: 1;
+			margin:  10px 10px 10px 10px;
+		}
+		p {
+  			font-family: "Trebuchet MS", Helvetica, sans-serif;
+		}
+		p.small{
+			line-height: 1.5;
+		}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+	</STYLE>
+</HEAD>
+<BODY>
+	<H1 id="font"><p style="color:83624d">Staff & Faculty Mugshot</p></H1>
+	<IMG src="bg.png" id="bg"></IMG>
+
+	<p id="body" class="small">
+		This is a design of faculty mugshot pages created by Dora and me. We used 4 main colors in the design: yellow, orange, red, pink, purple, blue, green, and sage green. The order of top colors from the first page to the last page is: yellow, orange, red, pink, purple, blue, green, and sage green. The order of the bottom colors of the first page to the last page is the opposite of the top colors order(from sage green to yellow). The strips on the top and bottom of each page are created with a thin white rectangle and painted with colors using a brush effect brush. The white background makes the design on top stand out and decreases the complexity of the design since there are already many colors utilized. The frame of the image is created by two rectangles that are the same size(rectangle tool), the space where both rectangles overlap is where the image is placed. The background color of the frame is a gradient from top to bottom. We chose to use multiple colors because we wanted it to be colorful and playful we think faculty pages do not have to be serious because they are adults, it can be more interesting by using many colors to increase its childlikeness.</p>
+	<p id="body2" class="small">
+		Through the process of making this design, I learned how to add a gradient onto unconnected rectangles. I also learned that when it is time to take the photo, then go, don’t be absent or not go to take the photo because it will increase the work of people who are creating the mugshot pages. I chose to include this design in my portfolio because I spent a few weeks and many hours changing the position of the faculty members when there were new photos that needed to be added, so I think this is the best design that I have.</p>
+
+
+<div class="slideshow-container" id="design">
+
+<div class="mySlides fade">
+  <div class="numbertext"><p style="color:83624d">1 / 4</p></div>
+  <img src="3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><p style="color:83624d">2 / 4</p></div>
+  <img src="31.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><p style="color:83624d">3 / 4</p></div>
+  <img src="32.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"><p style="color:83624d">4 / 4</p></div>
+  <img src="33.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center" id="dot">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</BODY>
+</HTML>
+</BODY>
+</HTML>
